@@ -25,7 +25,7 @@ The training data for this model consists of ~200k vehicle crops extracted from 
 
 ## Downloading the model
 
-Download the model zipfile from the releases page and extract locally.  It contains a checkpoint file (camera-trap-vehicle-classifier.2025.07.09.ckpt) and the class list file (classes.txt).
+Download the model zipfile from the [releases page](https://github.com/agentmorris/camera-trap-vehicle-classifier/releases) and extract locally.  It contains a checkpoint file (camera-trap-vehicle-classifier.2025.07.09.ckpt) and the class list file (classes.txt).
 
 
 ## Preparing images
