@@ -23,7 +23,7 @@ The current release is fine-tuned from the [timm/eva02_large_patch14_448.mim_m38
 
 ## Training data overview
 
-The training data for this model consists of ~200k vehicle crops extracted from ~300k images from 65 camera locations in British Colombia.  Training data was provided by [Robin Naidoo](https://www.worldwildlife.org/experts/robin-naidoo), World Wildlife Fund.
+The training data for this model consists of ~200k vehicle crops extracted from ~300k images from 65 camera locations in British Columbia.  Training data was provided by [Robin Naidoo](https://www.worldwildlife.org/experts/robin-naidoo), World Wildlife Fund.
 
 
 ## Downloading the model
