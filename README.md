@@ -1,5 +1,10 @@
 # Camera trap vehicle classifier
 
+## Background
+
+The effects of human recreation on wildlife may vary depending on the type of road and trail use that is occurring (e.g. see [Naidoo and Burton, 2020](https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/csp2.271)).  Classifying human and vehicle detections into finer sub-classes (e.g., car/truck, horseback rider, mountain biker) facilitates the study of how different types of recreational activities impact the distribution and abundance of wildlife. 
+
+
 ## Overview
 
 This repo hosts the training and inference code for a PyTorch model that classifies vehicles cropped from camera trap images (typically cropped with [MegaDetector](https://github.com/agentmorris/MegaDetector)) into the following categories:
@@ -10,8 +15,6 @@ This repo hosts the training and inference code for a PyTorch model that classif
 * quad
 
 Sample images are provided in the <a href="#sample-images">sample images</a> section below.
-
-This is important because (reasons that Robin will provide as per email).
 
 This classifier is typically used in an ensemble with [SpeciesNet](https://github.com/google/cameratrapai), which also allows us to identify domestic dogs and horses, which complements the picture of recreational area use provided by the vehicle classifications.
 
