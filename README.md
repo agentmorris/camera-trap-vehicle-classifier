@@ -23,7 +23,7 @@ The current release is fine-tuned from the [timm/eva02_large_patch14_448.mim_m38
 
 ## Training data overview
 
-The training data for this model consists of ~200k vehicle crops extracted from ~300k images from 65 camera locations in British Colombia.
+The training data for this model consists of ~200k vehicle crops extracted from ~300k images from 65 camera locations in British Colombia.  Training data was provided by [Robin Naidoo](https://www.worldwildlife.org/experts/robin-naidoo), World Wildlife Fund.
 
 
 ## Downloading the model
@@ -110,7 +110,7 @@ Relies on train_vehicle_classifier.py for core classes.
 
 ## Sample images
 
-These images are included here to capture the gestalt of what this classifier is trained on.  The classifier is trained only on the cropped vehicles, not on the entire images.  These are visualizations of the classifier output on the original images.
+These images are included here to capture the gestalt of what this classifier is trained on.  The classifier is trained only on the cropped vehicles, not on the entire images.  These are visualizations of the classifier output on the original images.  Image credit Robin Naidoo, World Wildlife Fund.
 
 ### car/truck
 
