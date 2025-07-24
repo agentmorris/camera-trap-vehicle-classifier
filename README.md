@@ -1,5 +1,10 @@
 # Camera trap vehicle classifier
 
+## Background
+
+The effects of human recreation on wildlife may vary depending on the type of road and trail use that is occurring (e.g. see [Naidoo and Burton, 2020](https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/csp2.271)).  Classifying human and vehicle detections into finer sub-classes (e.g., car/truck, horseback rider, mountain biker) facilitates the study of how different types of recreational activities impact the distribution and abundance of wildlife. 
+
+
 ## Overview
 
 This repo hosts the training and inference code for a PyTorch model that classifies vehicles cropped from camera trap images (typically cropped with [MegaDetector](https://github.com/agentmorris/MegaDetector)) into the following categories:
@@ -11,8 +16,6 @@ This repo hosts the training and inference code for a PyTorch model that classif
 
 Sample images are provided in the <a href="#sample-images">sample images</a> section below.
 
-This is important because (reasons that Robin will provide as per email).
-
 This classifier is typically used in an ensemble with [SpeciesNet](https://github.com/google/cameratrapai), which also allows us to identify domestic dogs and horses, which complements the picture of recreational area use provided by the vehicle classifications.
 
 The current release is fine-tuned from the [timm/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k](https://huggingface.co/timm/eva02_large_patch14_448.mim_m38m_ft_in22k_in1k) base model.
@@ -20,7 +23,7 @@ The current release is fine-tuned from the [timm/eva02_large_patch14_448.mim_m38
 
 ## Training data overview
 
-The training data for this model consists of ~200k vehicle crops extracted from ~300k images from 65 camera locations in British Colombia.
+The training data for this model consists of ~200k vehicle crops extracted from ~300k images from 65 camera locations in British Columbia.  Training data was provided by [Robin Naidoo](https://www.worldwildlife.org/experts/robin-naidoo), World Wildlife Fund.
 
 
 ## Downloading the model
@@ -105,7 +108,7 @@ Relies on train_vehicle_classifier.py for core classes.
 
 ## Sample images
 
-These images are included here to capture the gestalt of what this classifier is trained on.  The classifier is trained only on the cropped vehicles, not on the entire images.  These are visualizations of the classifier output on the original images.
+These images are included here to capture the gestalt of what this classifier is trained on.  The classifier is trained only on the cropped vehicles, not on the entire images.  These are visualizations of the classifier output on the original images.  Image credit Robin Naidoo, World Wildlife Fund.
 
 ### car/truck
 
