@@ -73,8 +73,6 @@ If you are on Windows and you have a GPU, you may have to also install the GPU v
 
 ### train_vehicle_classifier.py
 
-train_vehicle_classifier.py
-
 PyTorch Lightning script for fine-tuning vision models for vehicle classification.
 
 Supports timm and Hugging Face models.
