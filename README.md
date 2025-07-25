@@ -89,7 +89,7 @@ Input data is provided as:
 
 ### train_vehicle_classifier_2025.07.02.py
 
-Notebook that drives train_custom_classifier to train the actual classifier.
+Notebook that drives train_vehicle_classifier to train the actual classifier.
 
 Also:
 
