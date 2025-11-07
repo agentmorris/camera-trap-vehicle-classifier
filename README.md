@@ -9,7 +9,7 @@
 * [Environment setup](#environment-setup) 
 * [Running the classifier](#running-the-classifier)  
 * [Files in this repo](#files-in-this-repo)  
-* [Sample images](#sample images)  
+* [Sample images](#sample-images)  
 * [Also see](#also-see)  
 
 ## Overview
@@ -142,4 +142,4 @@ These images are included here to capture the gestalt of what this classifier is
 
 ## Also see
 
-* This model is also available in the [Animl](https://animl.camera/) platform
+* This model is also available in the [Animl](https://animl.camera/) platform.
