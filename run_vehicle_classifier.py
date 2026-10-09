@@ -241,6 +241,7 @@ def run_inference(checkpoint_path,
                   num_workers=4,
                   input_size=None,
                   class_file=None,
+                  relative_filenames_to_process=None,
                   output_absolute_filenames=False):
     """
     Run inference on a folder of images (recursively) using a trained model
@@ -253,6 +254,8 @@ def run_inference(checkpoint_path,
         num_workers (int, optional): number of data loader workers
         input_size (tuple, optional): override input size as (height, width) tuple
         class_file (str, optional): path to file containing class names (one per line)
+        relative_filenames_to_process (list, optional): list of filenames (relative to
+            input_dir) to include
         output_absolute_filenames (bool, optional): output absolute filenames instead of
             relative paths
     """
@@ -285,6 +288,32 @@ def run_inference(checkpoint_path,
     print(f"Scanning for images in: {input_dir}")
     image_paths = find_images(input_dir)
     print(f"Found {len(image_paths)} images")
+
+    if relative_filenames_to_process is not None:
+
+        def _normalize_relative_path(fn):
+            # Treat forward slashes and backslashes as equivalent
+            return str(fn).replace('\\', '/')
+
+        filenames_to_process = set(
+            _normalize_relative_path(fn) for fn in relative_filenames_to_process)
+
+        image_paths_to_process = []
+        for image_path in image_paths:
+            relative_path = Path(image_path).relative_to(Path(input_dir)).as_posix()
+            if relative_path in filenames_to_process:
+                image_paths_to_process.append(image_path)
+
+        n_requested = len(filenames_to_process)
+        n_matched = len(image_paths_to_process)
+        print(f"Restricting to {n_matched} of {n_requested} requested images "
+              f"(out of {len(image_paths)} images found)")
+        if n_matched < n_requested:
+            print(f"Warning: {n_requested - n_matched} requested images were not found in {input_dir}")
+
+        image_paths = image_paths_to_process
+
+    # ...if we should be restricting the list of images
 
     if len(image_paths) == 0:
         print("No images found!")
